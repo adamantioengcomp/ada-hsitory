@@ -1,0 +1,15 @@
+{
+    "name": "ada-history",
+    "version": "1.0.0",
+    "main": "ada-history.min.js",
+    "ignore":[
+      
+    ],
+    "dependencies": {
+       "jquery":  "*",
+	   "angular": "*",
+       "angular-translate": "*"
+    },
+    "devDependencies": {     
+    }
+}
