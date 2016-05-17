@@ -58,7 +58,7 @@ angular.module('history',[])
 		}])
 	.run(['$rootScope','history','$location','status',function($rootScope, history,$location,status){
 		
-		$rootScope.$on('$routeChangeSuccess', function() {
+		var changeEvent = function(){
 			if (!status.goingBack && !status.goingForward){				
 				//history.push($location.$$url);
 				status.current++;
@@ -67,6 +67,14 @@ angular.module('history',[])
 				status.goingBack = false;
 				status.goingForward = false;
 			}
+		};
+
+		$rootScope.$on('$routeChangeSuccess', function() {
+			changeEvent();
+	    });
+
+	    $rootScope.$on('$stateChangeSuccess', function() {
+			changeEvent();
 	    });
 
 	}]);
