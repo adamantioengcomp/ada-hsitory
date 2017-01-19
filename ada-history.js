@@ -17,7 +17,7 @@ angular.module('history',[])
 						if (history[i] == url){
 							status.current = i;
 							var prevUrl = url;
-							history = history.slice(0,Number(i)+1);
+							//history.slice(0,Number(i)+1);
 							break;
 						}
 					}

@@ -1,6 +1,6 @@
 {
     "name": "ada-history",
-    "version": "v1.0.001",
+    "version": "v1.0.002",
     "main": "ada-history.min.js",
     "ignore":[
       
